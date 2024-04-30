@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="{% url 'vkApi' user.id %}" method="post">
+        {% csrf_token %}
+        <h2>Имя: {{ first_name }}</h2>
+        <h2>Фамилия: {{ last_name }}</h2> 
+        <p>Дата: {{ current_date }}</p>
+        <p>Время: {{ current_time }}</p>
+    </form>
+</body>
+</html>
